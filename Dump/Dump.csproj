@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="App.Metrics" Version="4.1.0" />
+    <PackageReference Include="App.Metrics.AspnetCore.Mvc" Version="4.1.0" />
+    <PackageReference Include="App.Metrics.AspnetCore.Tracking" Version="4.1.0" />
+    <PackageReference Include="Audit.NET" Version="17.0.0" />
+    <PackageReference Include="Audit.NET.Elasticsearch" Version="17.0.0" />
+    <PackageReference Include="Audit.NET.MongoDB" Version="17.0.0" />
+    <PackageReference Include="Audit.NET.SqlServer" Version="17.0.0" />
+    <PackageReference Include="Audit.WebApi.Core" Version="16.5.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Common\**" />
+    <Compile Remove="Controllers\SFController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Common\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Common\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Common\**" />
+  </ItemGroup>
+
+</Project>
